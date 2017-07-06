@@ -1,0 +1,3 @@
+﻿test file io
+ni hao 
+你好吗？

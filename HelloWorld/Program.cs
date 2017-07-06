@@ -22,6 +22,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// #define PI
+
 namespace HelloWorld
 {
     class Program
@@ -58,26 +60,26 @@ namespace HelloWorld
             //dc.Constants();
 
             //运算符
-//             OperatorsAppl oa = new OperatorsAppl();
-//             oa.operators();
-// 
-//             //算术运算符
-//             oa.operators2();
-//             //关系运算符
-//             oa.operators3();
-//             //逻辑运算符
-//             oa.operators4();
-// 
-//             //位运算符
-//             oa.operators5();
-//             //其他运算符
-//             oa.operators6();
+            //             OperatorsAppl oa = new OperatorsAppl();
+            //             oa.operators();
+            // 
+            //             //算术运算符
+            //             oa.operators2();
+            //             //关系运算符
+            //             oa.operators3();
+            //             //逻辑运算符
+            //             oa.operators4();
+            // 
+            //             //位运算符
+            //             oa.operators5();
+            //             //其他运算符
+            //             oa.operators6();
 
             /* 局部变量定义 */
-            int a = 100;
-            int b = 200;
+            //             int a = 100;
+            //             int b = 200;
             //             int ret;
-            NumberManipulator n = new NumberManipulator();
+            //             NumberManipulator n = new NumberManipulator();
             // 
             //             //调用 FindMax 方法
             //             ret = n.FindMax(a, b);
@@ -134,19 +136,86 @@ namespace HelloWorld
             //             ma.myArrayDemo();
             //             ma.myArrayDemoByForEach();
 
-//             MyString ms = new MyString();
-//             ms.StringDemo();
+            //             MyString ms = new MyString();
+            //             ms.StringDemo();
 
-            //
-            User user = new User.UserBuilder("liu", "landy")
-                .setAge(30)
-                .setAddr("湖里")
-                .setPhone("13333321312")
-                .build();
+            //建造者模式
+            //             User user = new User.UserBuilder("liu", "landy")
+            //                 .setAge(30)
+            //                 .setAddr("湖里")
+            //                 .setPhone("13333321312")
+            //                 .build();
+
+            //             MyStruct myStruct = new MyStruct();
+            //             myStruct.printStructInfo();
+
+            //继承
+            //             InheritanceApplication ia = new InheritanceApplication();
+            //             ia.testInheritance();
+            //             Tabletop tt = new Tabletop(10,50);
+            //             int area = tt.getArea();
+            //             tt.Display();
+            // 
+            //             Console.WriteLine("油漆总成本： ${0}", tt.getCost(area));
+            //多态
+            //             PolymorphismApplication pa = new PolymorphismApplication();
+            // 调用 print 来打印整数
+            //             pa.print(5);
+            //             // 调用 print 来打印浮点数
+            //             pa.print(500.263);
+            //             // 调用 print 来打印字符串
+            //             pa.print("Hello C++");
+
+            //             Rect r = new Rect(10, 7);
+            //             double a = r.area();
+            //             Console.WriteLine("面积： {0}", a);
+
+            //             Caller c = new Caller();
+            //             Rectanglev r = new Rectanglev(10, 7);
+            //             Trianglev t = new Trianglev(10, 5);
+            //             c.CallArea(r);
+            //             c.CallArea(t);
+            //命名空间
+            //             first_space.namespace_cl fc = new first_space.namespace_cl();
+            //             second_space.namespace_cl sc = new second_space.namespace_cl();
+            //             fc.func();
+            //             sc.func();
+
+            //             #if (PI)
+            //                  Console.WriteLine("PI is defined");
+            //             #else
+            //                  Console.WriteLine("PI is not defined");
+            //             #endif
+
+            FileIOApplication fi = new FileIOApplication();
+            //fi.writeFile();
+            fi.readFile();
 
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
     }
 
+}
+
+
+namespace first_space
+{
+    class namespace_cl
+    {
+        public void func()
+        {
+            Console.WriteLine("Inside first_space");
+        }
+    }
+}
+namespace second_space
+{
+    class namespace_cl
+    {
+        public void func()
+        {
+            Console.WriteLine("Inside second_space");
+        }
+    }
 }
